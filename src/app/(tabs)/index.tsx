@@ -13,12 +13,13 @@ export default function FeedScreen() {
   //   </View>
   // );
 
-  return(
+  return (
     <FlatList
       data={posts}
-      renderItem={({item})=> <PostListItem post={item}/>}
-      contentContainerStyle={{gap:10}}
+      renderItem={({ item }) => <PostListItem post={item} />}
+      contentContainerStyle={{ gap: 10, maxWidth: 512, width:"100%",alignItems:'center'}}
       showsVerticalScrollIndicator={false}
+      className='flex-1'
     />
   )
 }
